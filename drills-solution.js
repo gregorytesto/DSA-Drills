@@ -1,53 +1,35 @@
-// Callback Functions
-
-// For loop
-
-// for (let i = 0; i < 10; i++) {
-// 	console.log(i);
-// }
+// Callback / Higher Order Functions
+// What are they?
+// Provide an example
 
 // CallStacks
+// What is it?
+// Provide an example
 
 // function a() {
 // 	console.log("Logging before b"); // 2
 // 	b();
 // 	console.log("Logging after b"); // 6
 // }
-
 // function b() {
 // 	console.log("Logging before c"); // 3
 // 	c();
 // 	console.log("Logging after c"); // 5
 // }
-
 // function c() {
 // 	console.log("Logging from c"); // 4
 // }
-
 // console.log("Logging before a"); // 1
 // a();
 // console.log("Logging after a"); // 7
 
 // Recursion
-
 // What is it?
-
-// Example
-
-// const myIterativeFunc = () => {
-// 	let count = 0;
-// 	while (count < 4) {
-// 		count++;
-// 	}
-// };
-// myIterativeFunc();
-
+// Provide an example
 // const myRecursiveFunc = (count = 0) => {
 // 	// console.log(count);
-
 // 	// Base Case
 // 	if (count > 3) return count;
-
 // 	count++;
 // 	// Call itself
 // 	console.log("Before Ran:", count);
@@ -55,84 +37,46 @@
 // 	console.log("After Ran:", count);
 // };
 // myRecursiveFunc();
-
-// Call stack
-// myRecursiveFunc(0)
-// myRecursiveFunc(1)
-// myRecursiveFunc(2)
-// myRecursiveFunc(3)
+// Call stack example of recursive function
 // myRecursiveFunc(4)
+// myRecursiveFunc(3)
+// myRecursiveFunc(2)
+// myRecursiveFunc(1)
+// myRecursiveFunc(0)
+//
+// function myFunc(num) {
+// 	console.log(num);
+// 	if (num > 3) return num;
+// 	let result = myFunc(num + 1);
+// 	return result + num;
+// }
+// let sum = myFunc(0);
 
-// Big O Notation
-
+// Big O Notation / Time complexity / Space complexity
 // What is it?
-
-// *Time complexity
-// Space complexity
+// Provide an example:
 
 // O(1) // Constant Time
 // function constFunc(num1, num2) {
-// 	for (let i = 0; i < 1000000; i++) {
-// 		return num1 + num2;
-// 	}
-
-// 	if (num1 > num2 && num1 > 10) {
-// 		if (num1 + num2 > 20) {
-// 			console.log(num1 + num2);
-// 			num1 + num2;
-// 		}
-// 	}
-// 	if (num1 > num2 && num1 > 10) {
-// 		if (num1 + num2 > 20) {
-// 			console.log(num1 + num2);
-// 			num1 + num2;
-// 		}
-// 	}
-// 	if (num1 > num2 && num1 > 10) {
-// 		if (num1 + num2 > 20) {
-// 			console.log(num1 + num2);
-// 			num1 + num2;
-// 		}
-// 	}
+// 	return 10; // Constant
+// 	return num1 + num2; // Constant
 // }
-
-// O(log(n)) Logarithmic Time - Log base 10
-
-// function logFunc(num) {
-// 	for (let i = num; i >= 1; i = i / 2) {
-// 		console.log(i);
-// 	}
-// }
-// logFunc(100);
 
 // O(n) // Linear Time
-// function linearFunc(arr) {
-// 	for (let i = 0; i < arr.length; i++) {
-// 		console.log(i);
-// 	}
-// }
-// linearFunc([1, 2, 3, 4, 5, 6]);
-
-function linearFunc(num) {
-	for (let i = 0; i < num; i++) {
-		console.log(i);
-	}
-}
-// O(100n)
-
-linearFunc(224);
-
-// function linearFunc(str) {
+// function linearStringFunc(str) {
 // 	for (let i = 0; i < str.length; i++) {
 // 		console.log(i);
 // 	}
 // }
-// linearFunc("sdkjf");
+// linearStringFunc("word");
+// function linearArrayFunc(arr) {
+// 	for (let i = 0; i < arr.length; i++) {
+// 		console.log(i);
+// 	}
+// }
+// linearArrayFunc([1, 2, 3, 4, 5, 6]);
 
-// O(nLog(n))
-
-// O(n^2)
-
+// O(n^2) // Quadratic
 // function quadTime(num) {
 // 	for (let i = 0; i < num; i++) {
 // 		for (let j = 0; j < num; j++) {
@@ -142,27 +86,91 @@ linearFunc(224);
 // }
 // quadTime(10);
 
-function quadTime(arr) {
-	arr.sort(); // o(nlog(n))
-	let result = arr.map((str) => str + " kitty cats"); // n
-	let newResult = result.filter((str) => str.includes("three")); // n^2
-	console.log(newResult);
-}
-quadTime(["two", "three", "four"]);
-
-// O(n^2)
-
 // Context (this)
+// What is it?
+// Provide an example
 
-// OOP
-// Class
-// Inheritance
-// Methods
+// OOP / Class / Inheritance / Properties / Methods
+// What is it?
+// Provide an example
 
 // Linked Lists
+// What is it?
+// Provide an example
+// insert O(1)
+// delete O(1)
 
-// Create
-// Inserting
-// Get Kth
-// Search
-// Size
+// Stack
+// What is it?
+// Provide an example
+class Node {
+	constructor(data) {
+		this.data = data;
+		this.next = null;
+	}
+}
+
+class Stack {
+	constructor(top = null) {
+		this.top = top;
+	}
+	// push O(1)
+	push(value) {
+		const newNode = new Node(value);
+		newNode.next = this.top;
+		this.top = newNode;
+	}
+	// pop O(1)
+	pop() {
+		if (this.top === null) return null;
+		let temp = this.top;
+		this.top = temp.next;
+		return temp.data;
+	}
+}
+
+// Queue
+// What is it?
+// Provide an example
+// enqueue
+// dequeue
+
+// Tree
+// What is it?
+// Provide an example
+// class Node {
+// 	constructor(data) {
+// 		this.data = data;
+// 		this.children = [];
+// 	}
+// }
+
+// class Tree {
+// 	constructor(root = null) {
+// 		this.root = root;
+// 	}
+// }
+// insert
+// remove
+
+// Binary Tree
+// What is it?
+// Provide an example
+// class Node {
+// 	constructor(data) {
+// 		this.data = data;
+// 		this.left = null;
+// 		this.right = null;
+// 	}
+// }
+
+// class BinaryTree {
+// 	constructor(root = null) {
+// 		this.root = root;
+// 	}
+// }
+// insert
+// remove
+
+// Trie
+// What is it?

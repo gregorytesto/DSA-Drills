@@ -1,5 +1,5 @@
-// Callback Functions
-// What is it?
+// Callback / Higher Order Functions
+// What are they?
 // Provide an example
 
 // CallStacks
