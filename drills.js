@@ -1,40 +1,59 @@
 // Callback Functions
-
-// For loop
+// What is it?
+// Provide an example
 
 // CallStacks
+// What is it?
+// Provide an example
 
 // Recursion
 // What is it?
-// Example
+// Provide an example
 
-// Big O Notation
+// Big O Notation / Time complexity / Space complexity
 // What is it?
-
-// *Time complexity
-// Space complexity
-
+// Provide an example:
 // O(1) // Constant Time
-// O(log(n)) Logarithmic Time - Log base 10
-
 // O(n) // Linear Time
-
-// O(nLog(n))
-
-// O(n^2)
+// O(n^2) // Quadratic
 
 // Context (this)
+// What is it?
+// Provide an example
 
-// OOP
-// Class
-// Inheritance
-// Properties
-// Methods
+// OOP / Class / Inheritance / Properties / Methods
+// What is it?
+// Provide an example
 
 // Linked Lists
+// What is it?
+// Provide an example
+// insert O(1)
+// delete O(1)
 
-// Create
-// Inserting
-// Get Kth
-// Search
-// Size
+// Stack
+// What is it?
+// Provide an example
+// push O(1)
+// pop O(1)
+
+// Queue
+// What is it?
+// Provide an example
+// enqueue
+// dequeue
+
+// Tree
+// What is it?
+// Provide an example
+// insert
+// remove
+
+// Binary Tree
+// What is it?
+// Provide an example
+// insert
+// remove
+
+// Trie
+// What is it?
